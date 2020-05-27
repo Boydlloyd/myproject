@@ -1,0 +1,16 @@
+{% extends "template.html" %}
+    {% load crispy_forms_tags %}
+{% block content %}
+
+    <form method="post" action="" id="formcard">
+        {% csrf_token %}
+
+        <div class="col-sm-4" >
+            {{form | crispy}}
+           
+            <div class="col-sm-4">
+                <input type="submit" value="Save" class="btn btn-primary btn-block btn-sm"/>
+            </div>
+        </div>
+    </form>
+{% endblock %}
